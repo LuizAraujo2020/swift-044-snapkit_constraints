@@ -33,13 +33,20 @@ extension QuizViewController {
   func setupConstraints() {
     updateProgress(to: 0)
 
-      lblTimer.snp.makeConstraints { make in
-          make.width.equalToSuperview().multipliedBy(0.45)      // Make the label’s width equal to the superview’s width, multiplied by 0.45 (i.e., 45% of the superview’s width).
-          make.height.equalTo(45)                               // Set the label’s height to a static 45.
-          make.top.equalTo(viewProgress.snp.bottom).offset(32)  // Constrain the top of the label to the bottom of the progress bar, offset by 32.
-          make.centerX.equalToSuperview()                       // Center the X axis to the superview’s X axis, making the label horizontally centered.
-      }
-      
+//      lblTimer.snp.makeConstraints { make in
+//          make.width.equalToSuperview().multipliedBy(0.45)      // Make the label’s width equal to the superview’s width, multiplied by 0.45 (i.e., 45% of the superview’s width).
+//          make.height.equalTo(45)                               // Set the label’s height to a static 45.
+//          make.top.equalTo(viewProgress.snp.bottom).offset(32)  // Constrain the top of the label to the bottom of the progress bar, offset by 32.
+//          make.centerX.equalToSuperview()                       // Center the X axis to the superview’s X axis, making the label horizontally centered.
+//          make.centerY.equalToSuperview()
+//      }
+    lblTimer.snp.makeConstraints { make in
+        make.width.equalToSuperview().multipliedBy(0.45).labeled("timerWidth")
+        make.height.equalTo(45).labeled("timerHeight")
+        make.top.equalTo(viewProgress.snp.bottom).offset(32).labeled("timerTop")
+        make.centerX.equalToSuperview().labeled("timerCenterX")
+    }
+
       
       lblQuestion.snp.makeConstraints { make in
           make.top.equalTo(lblTimer.snp.bottom).offset(24)
