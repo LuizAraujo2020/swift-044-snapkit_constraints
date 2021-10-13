@@ -31,16 +31,6 @@ import SnapKit
 
 extension QuizViewController {
   func setupConstraints() {
-    guard let navView = navigationController?.view else { return }
-
-    viewProgress.translatesAutoresizingMaskIntoConstraints = false
-    
-    NSLayoutConstraint.activate([
-      viewProgress.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-      viewProgress.heightAnchor.constraint(equalToConstant: 32),
-      viewProgress.leadingAnchor.constraint(equalTo: view.leadingAnchor)
-    ])
-
     updateProgress(to: 0)
 
       lblTimer.snp.makeConstraints { make in
@@ -72,13 +62,14 @@ extension QuizViewController {
   }
   
     func updateProgress(to progress: Double) {
-        if let constraint = progressConstraint {
-            constraint.isActive = false
-        }
-
-        progressConstraint = viewProgress.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: CGFloat(progress))
-        progressConstraint.isActive = true
+      viewProgress.snp.remakeConstraints { make in
+        make.top.equalTo(view.safeAreaLayoutGuide)
+        make.width.equalToSuperview().multipliedBy(progress)
+        make.height.equalTo(32)
+        make.leading.equalToSuperview()
+      }
     }
+
 }
 
 // MARK: - Orientation Transition Handling
