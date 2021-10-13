@@ -13,6 +13,12 @@
 		6FAFBB0527167F8700D53753 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FAFBB0327167F8700D53753 /* Main.storyboard */; };
 		6FAFBB0727167F8A00D53753 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FAFBB0627167F8A00D53753 /* Assets.xcassets */; };
 		6FAFBB0A27167F8A00D53753 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FAFBB0827167F8A00D53753 /* LaunchScreen.storyboard */; };
+		6FAFBB142716823B00D53753 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6FAFBB132716823B00D53753 /* SnapKit */; };
+		6FAFBB1A2716830F00D53753 /* QuizViewController+Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFBB152716830E00D53753 /* QuizViewController+Logic.swift */; };
+		6FAFBB1B2716830F00D53753 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFBB162716830E00D53753 /* QuizViewController.swift */; };
+		6FAFBB1C2716830F00D53753 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFBB172716830E00D53753 /* State.swift */; };
+		6FAFBB1D2716830F00D53753 /* QuizViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFBB182716830F00D53753 /* QuizViewController+Constraints.swift */; };
+		6FAFBB1E2716830F00D53753 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAFBB192716830F00D53753 /* Questions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		6FAFBB0627167F8A00D53753 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FAFBB0927167F8A00D53753 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6FAFBB0B27167F8A00D53753 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FAFBB112716817F00D53753 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6FAFBB152716830E00D53753 /* QuizViewController+Logic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "QuizViewController+Logic.swift"; sourceTree = "<group>"; };
+		6FAFBB162716830E00D53753 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		6FAFBB172716830E00D53753 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		6FAFBB182716830F00D53753 /* QuizViewController+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "QuizViewController+Constraints.swift"; sourceTree = "<group>"; };
+		6FAFBB192716830F00D53753 /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FAFBB142716823B00D53753 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,7 @@
 		6FAFBAF127167F8700D53753 = {
 			isa = PBXGroup;
 			children = (
+				6FAFBB112716817F00D53753 /* README.md */,
 				6FAFBAFC27167F8700D53753 /* swift-044-snapkit_constraints */,
 				6FAFBAFB27167F8700D53753 /* Products */,
 			);
@@ -59,6 +73,11 @@
 				6FAFBAFD27167F8700D53753 /* AppDelegate.swift */,
 				6FAFBAFF27167F8700D53753 /* SceneDelegate.swift */,
 				6FAFBB0127167F8700D53753 /* ViewController.swift */,
+				6FAFBB192716830F00D53753 /* Questions.swift */,
+				6FAFBB172716830E00D53753 /* State.swift */,
+				6FAFBB162716830E00D53753 /* QuizViewController.swift */,
+				6FAFBB182716830F00D53753 /* QuizViewController+Constraints.swift */,
+				6FAFBB152716830E00D53753 /* QuizViewController+Logic.swift */,
 				6FAFBB0327167F8700D53753 /* Main.storyboard */,
 				6FAFBB0627167F8A00D53753 /* Assets.xcassets */,
 				6FAFBB0827167F8A00D53753 /* LaunchScreen.storyboard */,
@@ -83,6 +102,9 @@
 			dependencies = (
 			);
 			name = "swift-044-snapkit_constraints";
+			packageProductDependencies = (
+				6FAFBB132716823B00D53753 /* SnapKit */,
+			);
 			productName = "swift-044-snapkit_constraints";
 			productReference = 6FAFBAFA27167F8700D53753 /* swift-044-snapkit_constraints.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +133,9 @@
 				Base,
 			);
 			mainGroup = 6FAFBAF127167F8700D53753;
+			packageReferences = (
+				6FAFBB122716823B00D53753 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 6FAFBAFB27167F8700D53753 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +164,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FAFBB0227167F8700D53753 /* ViewController.swift in Sources */,
+				6FAFBB1B2716830F00D53753 /* QuizViewController.swift in Sources */,
 				6FAFBAFE27167F8700D53753 /* AppDelegate.swift in Sources */,
+				6FAFBB1D2716830F00D53753 /* QuizViewController+Constraints.swift in Sources */,
+				6FAFBB1A2716830F00D53753 /* QuizViewController+Logic.swift in Sources */,
+				6FAFBB1E2716830F00D53753 /* Questions.swift in Sources */,
 				6FAFBB0027167F8700D53753 /* SceneDelegate.swift in Sources */,
+				6FAFBB1C2716830F00D53753 /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6FAFBB122716823B00D53753 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6FAFBB132716823B00D53753 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6FAFBB122716823B00D53753 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6FAFBAF227167F8700D53753 /* Project object */;
 }

@@ -26,16 +26,29 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import UIKit
+import Foundation
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-  var window: UIWindow?
-  
-  func applicationDidFinishLaunching(_ application: UIApplication) {
-    let appearance = UINavigationBarAppearance()
-    appearance.backgroundColor = UIColor(red: 1, green: 108.0/255, blue: 0, alpha: 1.0)
-    UINavigationBar.appearance().scrollEdgeAppearance = appearance
-    UINavigationBar.appearance().standardAppearance = appearance
+// MARK: - Game State
+extension QuizViewController {
+  struct State {
+    let questions: [Question]
+    let numberOfQuestions: Int
+    var currentQuestion: Int
+    var correctAnswers: Int
+    
+    init(questions: [Question]) {
+      self.questions = questions
+      numberOfQuestions = questions.count
+      currentQuestion = 1
+      correctAnswers = 0
+    }
+    
+    var isLastQuestion: Bool {
+      return currentQuestion == numberOfQuestions
+    }
+    
+    var question: Question {
+      return questions[currentQuestion - 1]
+    }
   }
 }
